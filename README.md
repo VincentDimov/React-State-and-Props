@@ -1,17 +1,77 @@
-# React + Vite
+⚛️ React State & Props Exercise
+🎯 Goal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Practice using React state and props by building a simple app that displays and manages user profiles.
 
-Currently, two official plugins are available:
+🧩 Instructions
+1. Create data in App.js
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Create an array containing five person objects.
 
-## React Compiler
+Each object should include:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+firstName
 
-## Expanding the ESLint configuration
+lastName
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# React-State-and-Props
+age
+
+hobby
+
+2. Create a Profile component
+
+The component should receive a person object as a prop.
+
+It will be responsible for displaying that person’s information.
+
+3. Display profiles dynamically
+
+Render five Profile components, each receiving a different person object as props.
+
+Use a loop (e.g., map()) to generate them.
+
+Show/Hide behavior:
+
+Initially, only show each person’s first name.
+
+Add a button labeled "Show more".
+
+When clicked:
+
+Display all the person’s details (last name, age, hobby) below the first name.
+
+Change the button text to "Show less".
+
+When "Show less" is clicked:
+
+Hide the additional details again.
+
+Change the button text back to "Show more".
+
+4. Add Dark Mode functionality
+
+Create a “Dark Mode” toggle button that changes:
+
+Background color → dark
+
+Text color → light
+
+The same button should toggle back to light mode (light background, dark text).
+
+Use state to manage the mode.
+
+🌟 Extra Challenge
+
+Create a component named <AddProfile /> that includes:
+
+Input fields for adding new people (first name, last name, age, hobby).
+
+Functionality to insert the new person into the array of profiles.
+
+💡 Tips
+
+Use useState to manage both the profiles and dark mode.
+
+Use conditional rendering for the show/hide logic.
+
+Apply conditional classes or inline styles to switch between light and dark themes.
